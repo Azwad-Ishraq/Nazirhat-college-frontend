@@ -1,0 +1,70 @@
+
+.container{
+    background-color: rgba(128, 128, 128, 0.089);
+}
+/* .admitImg{
+    width: 1920px;
+} */
+.printArea{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    background-color: white;
+    /* width: 70%; */
+    width: 1254px;
+    margin: 0 auto;
+}
+.printAreaTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    
+}
+.printAreaTopTexts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+.printAreaTopTexts h1 h2{
+    display: inline;
+}
+.admitCardText{
+    text-align: center;
+}
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+}
+.infoContainer h2{
+    margin-bottom: 50px;
+}
+.printAreaBottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 30px;
+    align-items: baseline;
+}
+.printAreaBottom h2{
+    border-top: 5px solid black;
+    display: inline;
+    text-align: center;
+}
+.printAreaBottom span{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+}
+.btnContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}

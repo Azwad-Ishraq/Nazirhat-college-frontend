@@ -1,0 +1,29 @@
+.accordionTextContainer{
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+
+}
+.accordionTextContainer p{
+    margin: 10px;
+    color: #0984e3!important;
+
+}
+
+.accordionBody{
+    display: flex;
+    flex-direction: column;
+}
+.icon{
+    margin-right: 5px;
+}
+.button{
+    margin: 0 10px;
+}
+.link{
+    text-decoration: none;
+    color: white;
+}
+.link:hover{
+    color: white;
+}
