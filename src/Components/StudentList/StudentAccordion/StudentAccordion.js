@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserPen } from '@fortawesome/free-solid-svg-icons'
 import { faPrint } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+import PrintComp from '../../PrintComp/PrintComp'
 
 const StudentAccordion = (props) => {
     const { student } = props;
@@ -23,7 +24,7 @@ const StudentAccordion = (props) => {
                     </Accordion.Header>
                     <Accordion.Body className={styles.accordionBody}>
 
-                        <Table striped bordered hover size="sm">
+                        {/* <Table striped bordered hover size="sm">
                             <thead>
                                 <tr>
 
@@ -48,15 +49,17 @@ const StudentAccordion = (props) => {
 
 
                             </tbody>
-                        </Table>
+                        </Table> */}
+
+                        <PrintComp student={student}></PrintComp>
 
                         <div className="buttonContainer">
-                            <Link className={styles.link} to={`/print/${student?._id}`}>
+                            {/* <Link className={styles.link} to={`/print/${student?._id}`}>
                                     <Button className={styles.button} variant="success">
                                         <FontAwesomeIcon className={styles.icon} icon={faPrint} />
                                         Print Admit Card
                                     </Button>
-                            </Link>
+                            </Link> */}
 
                             {/* <Button className={styles.button} variant="danger">
                                 <FontAwesomeIcon className={styles.icon} icon={faUserPen} />

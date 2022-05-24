@@ -1,24 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import React from 'react';
 import { Button } from 'react-bootstrap';
-import admit from '../../Images/BS 20-21.jpg'
-import styles from './Print.module.css'
+import styles from './PrintComp.module.css'
 import logo from '../../Images/logo.jpg'
-import signature from '../../Images/signature2.png'
 import pSign from '../../Images/pSign.png'
-const Print = () => {
-    let params = useParams();
-    const [student,setStudent] = useState();
-    useEffect(() => {
-        fetch(`https://damp-bastion-67720.herokuapp.com/students/${params.id}`)
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                setStudent(data);
-            })
-    }, [])
+import signature from '../../Images/signature2.png'
+const PrintComp = ({student}) => {
 
-    
+
     function printDiv(divName) {
         var printContents = document.getElementById(divName).innerHTML;
         console.log(printContents)
@@ -32,8 +20,11 @@ const Print = () => {
         document.body.innerHTML = originalContents;
    }
 
+
+
     return (
-        <div className={styles.container}>
+        <div>
+            <div className={styles.container}>
             <div className={styles.btnContainer}>
                 <Button onClick={() => printDiv('printableArea')}  variant="success">Print Admit Card</Button>
             </div>
@@ -81,7 +72,8 @@ const Print = () => {
 
             </div>
         </div>
+        </div>
     );
 };
 
-export default Print;
+export default PrintComp;
